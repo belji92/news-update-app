@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+<h2>News List</h2>
+<% news.forEach(item => { %>
+    <div class="news-card">
+        <h3><%= item.title %></h3>
+        <p><%= item.content %></p>
+        <p><%= item.category %> | <%= new Date(item.date).toLocaleDateString() %></p>
+        <a href="/delete-news/<%= item._id %>">Delete</a>
+    </div>
+<% }) %>
+<%- include('partials/footer') %>

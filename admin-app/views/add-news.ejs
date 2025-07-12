@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+<h2>Add News</h2>
+<form method="POST" action="/add-news">
+    <input type="text" name="title" required placeholder="Title"><br><br>
+    <textarea name="content" required placeholder="Content"></textarea><br><br>
+    <input type="text" name="category" required placeholder="Category"><br><br>
+    <input type="text" name="imageUrl" placeholder="Image URL"><br><br>
+    <button type="submit">Add</button>
+</form>
+<%- include('partials/footer') %>
