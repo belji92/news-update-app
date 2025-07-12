@@ -1,0 +1,27 @@
+<%- include('partials/header') %>
+
+<section id="weather">
+    <p>Loading weather data...</p>
+</section>
+
+<h2>Latest News</h2>
+<% latestNews.forEach(news => { %>
+    <div class="news-card">
+        <h3><%= news.title %></h3>
+        <p><%= news.content %></p>
+        <p><small><%= new Date(news.date).toLocaleDateString() %></small></p>
+        <% if (news.imageUrl) { %>
+            <img src="<%= news.imageUrl %>" alt="News Image" width="100%">
+        <% } %>
+    </div>
+<% }) %>
+
+<h2>Image Gallery</h2>
+<div class="gallery">
+    <img src="/images/news1.jpg" alt="Gallery 1" width="200px">
+    <img src="/images/news2.jpg" alt="Gallery 2" width="200px">
+    <img src="/images/news3.jpg" alt="Gallery 3" width="200px">
+</div>
+
+<%- include('partials/footer') %>
+<script src="/js/weather.js"></script>

@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+
+<h2>Sports News</h2>
+<% sportsNews.forEach(news => { %>
+    <div class="news-card">
+        <h3><%= news.title %></h3>
+        <p><%= news.content %></p>
+        <p><small><%= new Date(news.date).toLocaleDateString() %></small></p>
+    </div>
+<% }) %>
+
+<%- include('partials/footer') %>
